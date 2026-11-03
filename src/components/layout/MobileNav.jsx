@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import SmartLink from '../ui/SmartLink'
 import Button from '../ui/Button'
 import { Chevron, Phone } from '../ui/Icons'
@@ -48,9 +48,21 @@ function Expandable({ label, href, items, onNavigate, depth = 0 }) {
   )
 }
 
-export default function MobileNav({ id, onNavigate }) {
+export default function MobileNav({ id, top = 72, closing = false, onNavigate }) {
+  const ref = useRef(null)
+
+  // Move keyboard focus into the menu when it opens.
+  useEffect(() => {
+    ref.current?.querySelector('a, button')?.focus({ preventScroll: true })
+  }, [])
+
   return (
-    <div id={id} className="fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto bg-navy-950 lg:hidden">
+    <div
+      id={id}
+      ref={ref}
+      style={{ top }}
+      className={`fixed inset-x-0 bottom-0 z-40 overflow-y-auto bg-navy-950 lg:hidden ${closing ? 'menu-exit pointer-events-none' : 'menu-enter'}`}
+    >
       <nav aria-label="Mobile" className="container-site pb-10 pt-4">
         <ul>
           {navigation.main.map((item) => {

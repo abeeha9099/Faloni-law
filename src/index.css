@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Self-hosted stand-in for Orpheus Pro while the Adobe Fonts stylesheet loads (it no longer blocks first paint).
+   Cormorant Garamond is scaled so its width and vertical metrics match Orpheus Pro, measured in the browser
+   (Orpheus is 97.9% of Cormorant's width; ascent 1.14em, descent 0.49em), so headings do not reflow on swap. */
+@font-face {
+  font-family: "Orpheus Fallback";
+  src: url("./assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 97.9%;
+  ascent-override: 116%;
+  descent-override: 50%;
+  line-gap-override: 0%;
+}
+
 /* Faloni Law Group design tokens. Original brand colors are marked; all others are tints/shades of them. */
 @theme {
   --color-navy-950: #0a1429;
@@ -22,7 +37,7 @@
   --color-ink: #1c2638;
   --color-slate: #4a5568;
 
-  --font-display: "orpheuspro", "Cormorant Garamond", Georgia, serif;
+  --font-display: "orpheuspro", "Orpheus Fallback", Georgia, serif;
   --font-label: "Bebas Neue", "Arial Narrow", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
@@ -49,9 +64,11 @@
     letter-spacing: -0.01em;
     line-height: 1.05;
   }
+  /* Two-tone focus ring: the navy inner ring shows on light backgrounds, the gold outer ring on navy ones. */
   :focus-visible {
-    outline: 2px solid var(--color-gold-500);
-    outline-offset: 3px;
+    outline: 3px solid var(--color-gold-500);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-navy-900);
   }
   ::selection {
     background: var(--color-gold-500);
@@ -78,11 +95,46 @@
   to { opacity: 1; transform: none; }
 }
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Hero entrance: short staggered fade-up on first paint (delay set per element with --enter-delay). */
+.hero-enter {
+  animation: fadeUp 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--enter-delay, 0ms) both;
+}
+
+/* Mobile menu: fades and slides in on open; the exit animation plays before it unmounts (250ms). */
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes menuOut {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+.menu-enter { animation: menuIn 300ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.menu-exit { animation: menuOut 250ms ease-in both; }
+
+/* Scroll reveal (see components/ui/Reveal.jsx). Only content below the first screen is ever hidden. */
+.reveal {
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
+  .reveal-pending { opacity: 1; transform: none; }
 }

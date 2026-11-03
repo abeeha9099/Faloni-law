@@ -6,9 +6,11 @@ import PendingPage from './pages/PendingPage'
 import NotFound from './pages/NotFound'
 import { pendingRoutes } from './routes'
 
-// Pages rebuilt so far. Every other original URL falls back to PendingPage.
+// Opt in to React Router v7 behaviour now (silences the v6 upgrade warnings). Shared by client and prerender.
+export const routerFuture = { v7_startTransition: true, v7_relativeSplatPath: true }
+
+// Pages rebuilt so far (the home route is the index below). Add new pages here and to builtPaths in routes.js.
 const builtPages = [{ path: '/about-us/', element: <About /> }]
-const built = new Set(builtPages.map((p) => p.path))
 
 export default function App() {
   return (
@@ -18,11 +20,9 @@ export default function App() {
         {builtPages.map((p) => (
           <Route key={p.path} path={p.path} element={p.element} />
         ))}
-        {pendingRoutes
-          .filter((r) => !built.has(r.href))
-          .map((r) => (
-            <Route key={r.href} path={r.href} element={<PendingPage title={r.label} />} />
-          ))}
+        {pendingRoutes.map((r) => (
+          <Route key={r.href} path={r.href} element={<PendingPage title={r.label} />} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

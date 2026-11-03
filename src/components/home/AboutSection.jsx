@@ -1,5 +1,6 @@
 import Button from '../ui/Button'
 import SectionHeading from '../ui/SectionHeading'
+import Reveal from '../ui/Reveal'
 import { Phone } from '../ui/Icons'
 import home from '../../data/home.json'
 import site from '../../data/site.json'
@@ -10,7 +11,7 @@ export default function AboutSection() {
   return (
     <section className="bg-offwhite py-20 lg:py-32">
       <div className="container-site grid items-center gap-16 lg:grid-cols-12 lg:gap-20">
-        <div className="relative mx-auto w-full max-w-[460px] lg:col-span-5 lg:max-w-none">
+        <Reveal className="relative mx-auto w-full max-w-[460px] lg:col-span-5 lg:max-w-none">
           {/* Offset gold frame echoes the offset squares of the Faloni logo mark. */}
           <div className="absolute -bottom-4 -right-4 left-4 top-4 border-2 border-gold-500 sm:-bottom-5 sm:-right-5" aria-hidden="true" />
           <picture className="contents">
@@ -28,9 +29,9 @@ export default function AboutSection() {
             <span className="block font-label text-[64px] leading-none text-gold-500">{about.badge.value}</span>
             <span className="eyebrow mt-1 block text-white">{about.badge.label}</span>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal delay={120} className="lg:col-span-7">
           <SectionHeading eyebrow={about.eyebrow} lead={about.titleLead} accent={about.titleAccent} />
           <div className="mt-8 max-w-2xl space-y-5 text-[17px] leading-relaxed text-slate">
             {about.paragraphs.map((p) => (
@@ -44,7 +45,7 @@ export default function AboutSection() {
             </Button>
             <Button href={site.phones.main.href} variant="outlineDark" icon={<Phone />}>{site.phones.main.display}</Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

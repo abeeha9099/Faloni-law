@@ -7,6 +7,7 @@ import MobileNav from './MobileNav'
 import { Chevron, Menu, Phone } from '../ui/Icons'
 import navigation from '../../data/navigation.json'
 import site from '../../data/site.json'
+import { liveUrlFor } from '../../routes'
 
 const navLinkClass = ({ isActive }) =>
   `relative flex h-full items-center gap-1.5 text-[14px] transition-colors hover:text-white after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-gold-500 after:transition-transform after:duration-300 ${
@@ -16,8 +17,15 @@ const navLinkClass = ({ isActive }) =>
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  // The mobile menu stays mounted briefly after closing so its exit animation can play.
+  const [menuMounted, setMenuMounted] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const closeTimer = useRef()
+  const toggleRef = useRef(null)
+  const headerRef = useRef(null)
+  const [menuTop, setMenuTop] = useState(72)
+  const mobileOpenRef = useRef(false)
+  mobileOpenRef.current = mobileOpen
   const location = useLocation()
 
   useEffect(() => {
@@ -26,8 +34,26 @@ export default function Header() {
   }, [location.pathname])
 
   useEffect(() => {
+    if (mobileOpen) {
+      // The menu sits directly under the header, wherever the preview banner above it has scrolled to.
+      setMenuTop(Math.round(headerRef.current?.getBoundingClientRect().bottom ?? 72))
+      setMenuMounted(true)
+      return
+    }
+    const t = setTimeout(() => setMenuMounted(false), 250)
+    return () => clearTimeout(t)
+  }, [mobileOpen])
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
-    const onKey = (e) => e.key === 'Escape' && (setOpenMenu(null), setMobileOpen(false))
+    const onKey = (e) => {
+      if (e.key !== 'Escape') return
+      setOpenMenu(null)
+      if (mobileOpenRef.current) {
+        setMobileOpen(false)
+        toggleRef.current?.focus()
+      }
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('keydown', onKey)
@@ -51,7 +77,7 @@ export default function Header() {
   const close = () => setOpenMenu(null)
 
   return (
-    <header className={`sticky top-0 z-50 bg-navy-900 transition-shadow duration-300 ${scrolled ? 'shadow-lg shadow-navy-950/30' : ''}`}>
+    <header ref={headerRef} className={`sticky top-0 z-50 bg-navy-900 transition-shadow duration-300 ${scrolled ? 'shadow-lg shadow-navy-950/30' : ''}`}>
       <div className="container-site flex h-[72px] items-center justify-between gap-6 lg:h-[88px]">
         <SmartLink href="/" className="shrink-0" aria-label={`${site.name}, home`}>
           <img src={site.logo} alt={`${site.name} logo`} width="328" height="81" className="h-9 w-auto lg:h-11" />
@@ -71,9 +97,15 @@ export default function Header() {
                   onMouseLeave={hasMenu ? scheduleClose : undefined}
                   onBlur={hasMenu ? (e) => !e.currentTarget.contains(e.relatedTarget) && close() : undefined}
                 >
-                  <NavLink to={item.href} end={item.href === '/'} className={navLinkClass}>
-                    {item.label}
-                  </NavLink>
+                  {liveUrlFor(item.href) ? (
+                    <SmartLink href={item.href} className={navLinkClass({ isActive: false })}>
+                      {item.label}
+                    </SmartLink>
+                  ) : (
+                    <NavLink to={item.href} end={item.href === '/'} className={navLinkClass}>
+                      {item.label}
+                    </NavLink>
+                  )}
                   {hasMenu && (
                     <button
                       type="button"
@@ -122,6 +154,7 @@ export default function Header() {
           <button
             type="button"
             className="flex h-11 w-11 items-center justify-center border border-navy-500/70 text-white lg:hidden"
+            ref={toggleRef}
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -131,7 +164,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      {mobileOpen && <MobileNav id="mobile-nav" onNavigate={() => setMobileOpen(false)} />}
+      {menuMounted && <MobileNav id="mobile-nav" top={menuTop} closing={!mobileOpen} onNavigate={() => setMobileOpen(false)} />}
     </header>
   )
 }

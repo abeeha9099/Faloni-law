@@ -36,15 +36,15 @@ export default function Hero() {
       <GridLines tone="light" topRule={false} />
 
       <div className="container-site relative pt-16 text-center sm:pt-20 lg:pt-24">
-        <p className="eyebrow flex items-center justify-center gap-3 text-gold-800">
+        <p className="hero-enter eyebrow flex items-center justify-center gap-3 text-gold-800">
           <span className="h-2 w-2 bg-gold-500" aria-hidden="true" />
           {hero.eyebrow}
         </p>
-        <h1 className="mx-auto mt-6 max-w-5xl text-[52px] text-navy-900 sm:text-[80px] lg:text-[112px]">
+        <h1 className="hero-enter mx-auto mt-6 max-w-5xl text-[52px] text-navy-900 [--enter-delay:80ms] sm:text-[80px] lg:text-[112px]">
           {hero.titleLead} <span className="accent-mark">{hero.titleAccent}</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-[17px] text-slate sm:text-[19px]">{hero.subtitle}</p>
-        <div className="relative mt-9">
+        <p className="hero-enter mx-auto mt-6 max-w-xl text-[17px] text-slate [--enter-delay:160ms] sm:text-[19px]">{hero.subtitle}</p>
+        <div className="hero-enter relative mt-9 [--enter-delay:240ms]">
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <Button href={site.consultCta.href} arrow>{site.consultCta.label}</Button>
             <Button href={site.phones.main.href} variant="outlineDark" icon={<Phone />}>
@@ -72,15 +72,15 @@ export default function Hero() {
             <picture className="contents">
               <source
                 type="image/webp"
-                srcSet="/images/photos/hero-manhattan-bridge-960.webp 960w, /images/photos/hero-manhattan-bridge-1280.webp 1280w, /images/photos/hero-manhattan-bridge-1920.webp 1920w"
-                sizes="(min-width: 1280px) 1200px, 100vw"
+                srcSet="/images/photos/hero-manhattan-bridge-720.webp 720w, /images/photos/hero-manhattan-bridge-960.webp 960w, /images/photos/hero-manhattan-bridge-1280.webp 1280w, /images/photos/hero-manhattan-bridge-1920.webp 1920w"
+                sizes="(min-width: 1280px) 1200px, (min-width: 1024px) calc(100vw - 80px), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
               />
               <img
                 src={hero.image}
                 alt={hero.imageAlt}
                 width="1920"
                 height="970"
-                fetchPriority="high"
+                fetchpriority="high"
                 className="h-full w-full object-cover object-[center_70%]"
               />
             </picture>
@@ -90,7 +90,14 @@ export default function Hero() {
           <div className="absolute bottom-5 left-5 flex items-center gap-4 bg-offwhite/95 p-3 pr-5 backdrop-blur sm:bottom-8 sm:left-8">
             <div className="flex -space-x-3">
               {attorneys.map((a) => (
-                <img key={a.id} src={a.photo} alt="" className="h-12 w-12 rounded-full border-2 border-offwhite object-cover object-top" />
+                <img
+                  key={a.id}
+                  src={a.photo.replace(/\.jpg$/, '.webp')}
+                  alt=""
+                  width="48"
+                  height="48"
+                  className="h-12 w-12 rounded-full border-2 border-offwhite object-cover object-top"
+                />
               ))}
             </div>
             <div className="text-left leading-tight">

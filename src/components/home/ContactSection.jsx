@@ -1,4 +1,5 @@
 import SectionHeading from '../ui/SectionHeading'
+import Reveal from '../ui/Reveal'
 import ContactForm from '../ContactForm'
 import OfficeCard from '../cards/OfficeCard'
 import { Clock } from '../ui/Icons'
@@ -10,21 +11,21 @@ const { contact } = home
 
 export default function ContactSection() {
   return (
-    <section id="consult" className="relative bg-offwhite pb-20 lg:pb-32">
+    <section id="consult" className="relative scroll-mt-16 bg-offwhite pb-20 lg:pb-32">
       {/* Curved navy tab carried down from the marquee (reference image 5). */}
       <svg viewBox="0 0 1440 64" preserveAspectRatio="none" className="block h-10 w-full text-navy-950 lg:h-16" aria-hidden="true">
         <path d="M0 0H1440C1330 0 1310 64 1210 64H230C130 64 110 0 0 0Z" fill="currentColor" />
       </svg>
 
       <div className="container-site grid gap-16 pt-14 lg:grid-cols-12 lg:gap-12 lg:pt-20">
-        <div className="lg:col-span-6">
+        <Reveal className="lg:col-span-6">
           <SectionHeading eyebrow={contact.eyebrow} lead={contact.titleLead} accent={contact.titleAccent} />
           <div className="mt-10">
             <ContactForm />
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-6">
+        <Reveal delay={120} className="lg:col-span-6">
           <h2 className="eyebrow flex items-center gap-3 text-gold-800">
             <span className="h-2 w-2 bg-gold-500" aria-hidden="true" />
             Our Offices
@@ -59,7 +60,7 @@ export default function ContactSection() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

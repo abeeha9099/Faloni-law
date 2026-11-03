@@ -9,13 +9,13 @@
     <meta name="theme-color" content="#112040" />
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
     <link rel="preconnect" href="https://p.typekit.net" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" type="image/webp" href="/images/photos/hero-manhattan-bridge-1280.webp" imagesrcset="/images/photos/hero-manhattan-bridge-960.webp 960w, /images/photos/hero-manhattan-bridge-1280.webp 1280w, /images/photos/hero-manhattan-bridge-1920.webp 1920w" imagesizes="(min-width: 1280px) 1200px, 100vw" />
+    <link rel="preload" as="image" type="image/webp" href="/images/photos/hero-manhattan-bridge-1280.webp" imagesrcset="/images/photos/hero-manhattan-bridge-720.webp 720w, /images/photos/hero-manhattan-bridge-960.webp 960w, /images/photos/hero-manhattan-bridge-1280.webp 1280w, /images/photos/hero-manhattan-bridge-1920.webp 1920w" imagesizes="(min-width: 1280px) 1200px, (min-width: 1024px) calc(100vw - 80px), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)" fetchpriority="high" />
     <!-- Brand display face (Orpheus Pro) from the firm's Adobe Fonts kit. Loads only on domains allowed in the kit.
-         Loaded as normal stylesheets: non-blocking loading was tested and caused a large layout shift when the fonts swapped in. -->
-    <link rel="stylesheet" href="https://use.typekit.net/syt8dfh.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" />
+         Loaded without blocking first paint; a metric-matched fallback ("Orpheus Fallback" in index.css) keeps the
+         layout steady when it swaps in. Inter and Bebas Neue are self-hosted and bundled with the site CSS. -->
+    <link rel="preload" as="style" href="https://use.typekit.net/syt8dfh.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/syt8dfh.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/syt8dfh.css" /></noscript>
   </head>
   <body>
     <div id="root"></div>

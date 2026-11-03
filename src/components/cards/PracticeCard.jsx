@@ -9,7 +9,7 @@ export default function PracticeCard({ index, title, href, icon, summary, topics
     >
       <div className="flex items-start justify-between">
         <span className="flex h-14 w-14 items-center justify-center bg-navy-900">
-          <img src={icon} alt="" className="h-8 w-8" />
+          <img src={icon} alt="" width="32" height="32" loading="lazy" decoding="async" className="h-8 w-8" />
         </span>
         <span className="font-label text-[18px] tracking-wider text-slate">[{String(index + 1).padStart(2, '0')}]</span>
       </div>

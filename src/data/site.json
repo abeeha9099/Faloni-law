@@ -11,7 +11,11 @@
     { "days": "Mon - Fri", "time": "9:00 am - 5:00 pm" },
     { "days": "Sat - Sun", "time": "Closed" }
   ],
-  "consultCta": { "label": "Free Initial Consult Today", "href": "/contact-us/" },
+  "consultCta": { "label": "Free Initial Consult Today", "href": "/#consult" },
+  "preview": {
+    "label": "Design preview",
+    "text": "Only Home and About Us are rebuilt here. Other links open the current falonilaw.com site in a new tab."
+  },
   "social": [
     { "label": "Faloni Law Group on Facebook", "href": "https://facebook.com/FaloniLawGroupLLC", "icon": "/images/brand/facebook.svg" },
     { "label": "Faloni Law Group on X (Twitter)", "href": "https://twitter.com/njwillsntrusts", "icon": "/images/brand/twitter.svg" }

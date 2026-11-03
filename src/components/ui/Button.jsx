@@ -9,12 +9,16 @@ const variants = {
 }
 
 export default function Button({ href, variant = 'gold', arrow = false, icon, className = '', children, ...props }) {
-  const classes = `inline-flex h-12 items-center justify-center gap-2.5 px-6 text-[15px] font-medium transition-colors duration-300 ${variants[variant]} ${className}`
+  const classes = `group inline-flex h-12 items-center justify-center gap-2.5 whitespace-nowrap px-6 text-[15px] font-medium transition-colors duration-300 ${variants[variant]} ${className}`
   const content = (
     <>
       {icon}
       <span>{children}</span>
-      {arrow && <ArrowUpRight />}
+      {arrow && (
+        <span className="inline-flex transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">
+          <ArrowUpRight />
+        </span>
+      )}
     </>
   )
   if (href) {
