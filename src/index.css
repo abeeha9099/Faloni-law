@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Faloni Law Group design tokens. Original brand colors are marked; all others are tints/shades of them. */
+@theme {
+  --color-navy-950: #0a1429;
+  --color-navy-900: #112040; /* original: primary navy */
+  --color-navy-800: #1a2b4f;
+  --color-navy-700: #23375e; /* original: secondary blue */
+  --color-navy-500: #395082; /* original: rule blue */
+  --color-navy-300: #8a9bbf;
+  --color-navy-100: #e6eaf2;
+  --color-navy-50: #f4f6fa;
+
+  --color-gold-50: #fff6df;
+  --color-gold-500: #ffc64c; /* original: accent gold */
+  --color-gold-600: #eda917; /* original: gold hover */
+  --color-gold-700: #a58000; /* original: deep gold */
+  --color-gold-800: #7d6100;
+
+  --color-offwhite: #f9f9f9; /* original */
+  --color-silver: #c3c7cf; /* sampled from logo bevel */
+  --color-ink: #1c2638;
+  --color-slate: #4a5568;
+
+  --font-display: "orpheuspro", "Cormorant Garamond", Georgia, serif;
+  --font-label: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-offwhite font-sans text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    @apply font-display font-normal;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-gold-500);
+    color: var(--color-navy-900);
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-10;
+  }
+  .eyebrow {
+    @apply font-label text-[15px] tracking-[0.12em] uppercase;
+  }
+  /* Gold block under the accent word, echoing the gold block in the logo. */
+  .accent-mark {
+    background-image: linear-gradient(transparent 62%, var(--color-gold-500) 62%, var(--color-gold-500) 92%, transparent 92%);
+    padding-inline: 0.06em;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

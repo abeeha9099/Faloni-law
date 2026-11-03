@@ -1,0 +1,27 @@
+{
+  "name": "Faloni Law Group, LLC",
+  "tagline": "The Team Behind You.",
+  "logo": "/images/brand/faloni-logo.png",
+  "phones": {
+    "main": { "display": "973-226-0050", "href": "tel:9732260050" },
+    "tollFree": { "display": "866-456-9668", "href": "tel:8664569668" },
+    "fax": { "display": "973-575-0491" }
+  },
+  "hours": [
+    { "days": "Mon - Fri", "time": "9:00 am - 5:00 pm" },
+    { "days": "Sat - Sun", "time": "Closed" }
+  ],
+  "consultCta": { "label": "Free Initial Consult Today", "href": "/contact-us/" },
+  "social": [
+    { "label": "Faloni Law Group on Facebook", "href": "https://facebook.com/FaloniLawGroupLLC", "icon": "/images/brand/facebook.svg" },
+    { "label": "Faloni Law Group on X (Twitter)", "href": "https://twitter.com/njwillsntrusts", "icon": "/images/brand/twitter.svg" }
+  ],
+  "legal": {
+    "copyright": "Content, including images, displayed on this website is protected by copyright laws. Downloading, republication, retransmission or reproduction of content on this website is strictly prohibited.",
+    "links": [
+      { "label": "Terms of Use", "href": "/terms-and-conditions/" },
+      { "label": "Privacy Policy", "href": "/privacy-policy/" }
+    ],
+    "credit": { "prefix": "Powered and Hosted by", "label": "BeeSeen Solutions", "href": "http://beeseensolutions.com/" }
+  }
+}

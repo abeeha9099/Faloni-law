@@ -1,0 +1,66 @@
+{
+  "main": [
+    { "label": "Home", "href": "/" },
+    { "label": "About us", "href": "/about-us/" },
+    { "label": "Practice areas", "href": "/practice-areas/", "mega": true },
+    { "label": "Blog", "href": "/blog/" },
+    {
+      "label": "Client Intake Form",
+      "href": "/client-intake-form/",
+      "children": [
+        { "label": "Wills and Trust Forms", "href": "/wills-and-trust-forms/" },
+        { "label": "Injury Intake Form", "href": "/injury-intake-form/" },
+        { "label": "Real Estate Form", "href": "/real-estate-form/" }
+      ]
+    },
+    { "label": "Contact us", "href": "/contact-us/" }
+  ],
+  "practiceAreas": [
+    {
+      "label": "Estate Planning",
+      "href": "/estate-planning/",
+      "children": [
+        { "label": "Wills And Trusts", "href": "/wills-and-trusts-attorney-roseland-nj/" },
+        { "label": "Revocable Living Trust", "href": "/revocable-living-trust-attorney-roseland-nj/" },
+        { "label": "Irrevocable Trust", "href": "/irrevocable-trust-attorney-roseland-nj/" },
+        { "label": "Probate Law", "href": "/probate-lawyer-roseland-nj/" }
+      ]
+    },
+    { "label": "Elder Law & Guardianship", "href": "/elder-law-guardianship/" },
+    { "label": "Asset Protection", "href": "/asset-protection/" },
+    { "label": "Estate & Trust Administration", "href": "/estate-and-trust-administration/" },
+    {
+      "label": "Personal Injury",
+      "href": "/personal-injury/",
+      "children": [
+        { "label": "Car Accidents", "href": "/automobile-injury-attorney-roseland-nj/" },
+        { "label": "Slip & Fall Accidents", "href": "/fall-down-injury-attorney-roseland-nj/" },
+        { "label": "Uber and Lyft Accidents", "href": "/uber-lyft-injury-attorney-roseland-nj/" },
+        { "label": "Truck Accidents", "href": "/truck-accident-injury-attorney-roseland-nj/" },
+        { "label": "Bar Accidents", "href": "/bar-injury-attorney-roseland-nj/" }
+      ]
+    },
+    {
+      "label": "Commercial & Retail Collections",
+      "href": "/commercial-retail-collections/",
+      "children": [
+        { "label": "Commercial Debt Collection", "href": "/commercial-debt-collection-attorney-roseland-nj/" },
+        { "label": "Consumer Debt Collection", "href": "/consumer-debt-collection-lawyer-roseland-nj/" },
+        { "label": "Judgment Enforcement", "href": "/judgment-enforcement-lawyer-roseland-nj/" },
+        { "label": "Real Estate Collection", "href": "/real-estate-collection-attorney-roseland-nj/" },
+        { "label": "Construction Debt Collection", "href": "/construction-debt-collection-attorney-roseland-nj/" },
+        { "label": "Banking Collection", "href": "/banking-collections-lawyer-roseland-nj/" }
+      ]
+    },
+    { "label": "Real Estate Transactions", "href": "/real-estate-transactions/" },
+    { "label": "Legal Collection", "href": "/legal-collection/" },
+    {
+      "label": "Business Law",
+      "href": "/business-lawyer-roseland-nj/",
+      "children": [
+        { "label": "LLC Attorney", "href": "/llc-attorney-roseland-nj/" },
+        { "label": "Corporate Law", "href": "/corporation-attorney-roseland-nj/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "About Us | Faloni Law Group, LLC | Experienced Attorneys",
+    "description": "With offices in New Jersey, New York, and Pennsylvania, Faloni Law Group, LLC is proud to serve Americans across the nation. Contact us today."
+  },
+  "hero": {
+    "eyebrow": "About Us",
+    "titleLead": "Who We",
+    "titleAccent": "Are",
+    "intro": "The Faloni Law Group, LLC was founded over 40 years ago by David A. Faloni, Sr., Esq.",
+    "panelLabel": "Firm Overview",
+    "panelNote": "Founded by David A. Faloni, Sr., Esq."
+  },
+  "overview": {
+    "eyebrow": "Firm Overview",
+    "lead": "Because of our reputation of excellent representation,",
+    "rest": "the firm has developed a distinguished clientele throughout the United States.",
+    "clienteleLabel": "Our clientele includes",
+    "clientele": ["Financial institutions", "Hospitals", "Large and small business", "Individuals"],
+    "offices": "The firm has multiple offices throughout New Jersey, New York, and Pennsylvania."
+  },
+  "practice": {
+    "eyebrow": "Practice Areas",
+    "titleLead": "A Comprehensive",
+    "titleAccent": "Practice",
+    "intro": "The firm offers a comprehensive practice focused on achieving the needs and goals of our clients, concentrating in the following practice areas:",
+    "areas": [
+      { "label": "Estate Planning – Wills & Trusts", "href": "/estate-planning/" },
+      { "label": "Elder Law & Guardianships", "href": "/elder-law-guardianship/" },
+      { "label": "Asset Protection", "href": "/asset-protection/" },
+      { "label": "Estate & Trust Administration", "href": "/estate-and-trust-administration/" },
+      { "label": "Personal Injury", "href": "/personal-injury/" },
+      { "label": "Commercial & Retail Collections", "href": "/commercial-retail-collections/" },
+      { "label": "Real Estate", "href": "/real-estate-transactions/" },
+      { "label": "Immigration" }
+    ],
+    "viewAll": { "label": "View All Practice Areas", "href": "/practice-areas/" }
+  },
+  "approach": {
+    "eyebrow": "How We Help",
+    "titleLead": "The Breadth of Our",
+    "titleAccent": "Legal Knowledge",
+    "items": [
+      {
+        "label": "Planning",
+        "title": "Estate Planning & Elder Law",
+        "parts": [
+          { "text": "The breadth of our legal knowledge is expansive. Our experienced " },
+          { "text": "Estate Planning", "href": "/estate-planning/" },
+          { "text": " and " },
+          { "text": "Elder law", "href": "/elder-law-guardianship/" },
+          { "text": " attorneys offer caring representation while building a strategy to help you achieve your goals by creating estate plans which limit or reduce taxes, offer simple efficient distribution, and protect assets while alive and upon death. We have helped countless families preserve their hard earned assets." }
+        ]
+      },
+      {
+        "label": "Litigation",
+        "title": "Trial Attorneys",
+        "parts": [
+          { "text": "Our experienced trial attorneys vigorously fight for our client’s rights in the areas of personal injury litigation, retail and commercial creditor’s rights litigation and probate litigation. Our firm also handles a wide variety of residential and commercial " },
+          { "text": "real estate transactions", "href": "/real-estate-transactions/" },
+          { "text": " and real estate litigation." }
+        ]
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "The Team Behind You.",
+    "titleLead": "Meet Our Exceptional",
+    "titleAccent": "Attorneys"
+  },
+  "next": [
+    { "eyebrow": "Explore", "title": "Practice Areas", "href": "/practice-areas/", "tone": "navy" },
+    { "eyebrow": "Free initial consult", "title": "Contact Us", "href": "/contact-us/", "tone": "gold" }
+  ]
+}

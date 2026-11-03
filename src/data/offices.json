@@ -1,0 +1,30 @@
+[
+  {
+    "id": "roseland",
+    "label": "Roseland, NJ",
+    "street": "425 Eagle Rock Ave., Suite 404",
+    "cityLine": "Roseland, NJ 07068",
+    "mapUrl": "https://maps.app.goo.gl/UHjUcgLrz7HfQpM99"
+  },
+  {
+    "id": "atlantic-highlands",
+    "label": "Atlantic Highlands, NJ",
+    "street": "2 Hennessey Blvd, Suite 2",
+    "cityLine": "Atlantic Highlands, NJ 07716",
+    "mapUrl": "https://maps.app.goo.gl/LoDQHttfuEZt8SDx8"
+  },
+  {
+    "id": "king-of-prussia",
+    "label": "Pennsylvania",
+    "street": "166 Allendale Rd.",
+    "cityLine": "King of Prussia, PA 19406",
+    "mapUrl": "https://maps.app.goo.gl/UCiSSa8AChx4ydP66"
+  },
+  {
+    "id": "flushing",
+    "label": "New York",
+    "street": "3808 Main Street, Suite 9A",
+    "cityLine": "Flushing, NY 11354",
+    "mapUrl": "https://maps.app.goo.gl/Ax5XcFF9sGBB3Dnk6"
+  }
+]

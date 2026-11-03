@@ -1,0 +1,29 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+
+# Environment files (secrets). The empty template stays tracked.
+.env
+.env.*
+!.env.example
+
+# Vercel local project link
+.vercel/
+
+# Local-only material, not part of the site
+backups/
+reference images/
+
+# Logs and caches
+*.log
+npm-debug.log*
+.vite/
+.cache/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

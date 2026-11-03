@@ -1,0 +1,41 @@
+[
+  {
+    "id": "david-a-faloni-sr",
+    "name": "David A. Faloni Sr., Esq.",
+    "title": "Founder",
+    "photo": "/images/attorneys/david-faloni-sr.jpg",
+    "photoAlt": "David A. Faloni Sr., Esq., founder of Faloni Law Group, LLC",
+    "practice": [
+      "Creditors Rights Litigation",
+      "Real Estate Transactions & Management",
+      "Estate Administration",
+      "Personal Injury Litigation"
+    ],
+    "bio": [
+      "David A. Faloni, Sr. is an attorney at Faloni Law Group. Faloni Law Group handles creditors’ rights issues for clients throughout the State of New Jersey & New York and Pennsylvania."
+    ],
+    "heldForReview": "Original wording, not published until the firm confirms a source: “Faloni Law Group is a leading law firm handling creditors’ rights issues for clients throughout the State of New Jersey & New York and Pennsylvania. Under David’s leadership, Faloni Law Group has grown to become one of the top three collection firms in New Jersey and one of the top fifty collection firms nationwide.”",
+    "href": "/about-us/"
+  },
+  {
+    "id": "david-a-faloni-jr",
+    "name": "David A. Faloni Jr., Esq.",
+    "title": "Managing Partner",
+    "photo": "/images/attorneys/david-faloni-jr.jpg",
+    "photoAlt": "David A. Faloni Jr., Esq., managing partner of Faloni Law Group, LLC",
+    "practice": [
+      "Creditors Rights Litigation",
+      "Real Estate Transactions and Management",
+      "Estate Administration & Estate Litigation",
+      "Elder Law",
+      "Personal Injury Litigation"
+    ],
+    "practiceNotes": {
+      "Creditors Rights Litigation": "Throughout the state of New Jersey"
+    },
+    "bio": [
+      "David A. Faloni, Jr. is Managing Partner of the Faloni Law Group."
+    ],
+    "href": "/about-us/"
+  }
+]

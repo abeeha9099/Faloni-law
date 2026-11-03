@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Real Estate Transactions",
+    "href": "/real-estate-transactions/",
+    "icon": "/images/icons/practice-1.svg",
+    "summary": "Our real estate attorneys can give property owners peace of mind through every step of the real estate process.",
+    "topics": ["Residential", "Commercial", "Closings"]
+  },
+  {
+    "title": "Elder Law & Guardianship",
+    "href": "/elder-law-guardianship/",
+    "icon": "/images/icons/practice-2.svg",
+    "summary": "Elder law attorneys use estate planning and asset protection techniques to preserve your legacy, so you may obtain the best care available without depleting your life’s savings.",
+    "topics": ["Medicaid Planning", "Guardianship"]
+  },
+  {
+    "title": "Estate Planning",
+    "href": "/estate-planning/",
+    "icon": "/images/icons/practice-3.svg",
+    "summary": "It’s a common misconception that estate planning is only for the wealthy, but everyone should establish an estate plan.",
+    "topics": ["Wills & Trusts", "Revocable", "Irrevocable", "Probate"]
+  },
+  {
+    "title": "Estate & Trust Administration",
+    "href": "/estate-and-trust-administration/",
+    "icon": "/images/icons/practice-4.svg",
+    "summary": "If you have an estate plan, investing in a probate lawyer can help your loved ones with the estate administration process.",
+    "topics": ["Executors", "Trustees"]
+  },
+  {
+    "title": "Personal Injury",
+    "href": "/personal-injury/",
+    "icon": "/images/icons/practice-5.svg",
+    "summary": "If you have been seriously injured in an accident caused by someone else’s negligence, you should not be burdened.",
+    "topics": ["Car", "Truck", "Uber & Lyft", "Slip & Fall", "Bar"]
+  },
+  {
+    "title": "Asset Protection",
+    "href": "/asset-protection/",
+    "icon": "/images/icons/practice-6.svg",
+    "summary": "Protecting your assets is essential for any business owner, professional, or property owner.",
+    "topics": ["Business Owners", "Professionals"]
+  },
+  {
+    "title": "Commercial & Retail Collections",
+    "href": "/commercial-retail-collections/",
+    "icon": "/images/icons/practice-7.svg",
+    "summary": "Our firm aggressively litigates a wide array of debt collection matters.",
+    "topics": ["Commercial", "Consumer", "Judgments", "Banking"]
+  }
+]

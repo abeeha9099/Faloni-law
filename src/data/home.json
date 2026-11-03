@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "eyebrow": "Faloni Law Group, LLC",
+    "titleLead": "Experienced",
+    "titleAccent": "Litigators",
+    "subtitle": "Dedicated To Achieving Our Client’s Goals Through Rock Solid Representation",
+    "image": "/images/photos/hero-manhattan-bridge.jpg",
+    "imageAlt": "Manhattan Bridge and the New York City skyline"
+  },
+  "statement": {
+    "lead": "The breadth of our legal knowledge is expansive.",
+    "rest": "We have helped countless families preserve their hard earned assets.",
+    "stats": [
+      { "value": "40+", "label": "Years Experience" },
+      { "value": "4", "label": "Offices" },
+      { "value": "3", "label": "States · NJ · NY · PA" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "titleLead": "Experience That",
+    "titleAccent": "Speaks For Itself",
+    "paragraphs": [
+      "Faloni Law Group, LLC is a full service Law Firm which was founded over 40 years ago by David A. Faloni, Sr., Esq. The firm is a regional law firm with offices in New Jersey, New York, and Pennsylvania.",
+      "Our experienced estate planning and elder law attorneys offer caring representation while building a strategy to help you achieve your goals by creating estate plans which limit or reduce taxes, offer simple efficient distribution, and protect assets while alive and upon death."
+    ],
+    "badge": { "value": "40+", "label": "Years Experience" },
+    "image": "/images/photos/about-gavel.jpg",
+    "imageAlt": "Gavel and model house resting on legal documents",
+    "link": { "label": "Read More", "href": "/about-us/" }
+  },
+  "practice": {
+    "eyebrow": "Practice Areas",
+    "titleLead": "Our Legal",
+    "titleAccent": "Practice Areas",
+    "intro": "Tell us how we can help you. Contact the Faloni Law Group, LLC for a complimentary initial consultation by calling",
+    "viewAll": { "label": "View All Practice Areas", "href": "/practice-areas/" }
+  },
+  "attorneys": {
+    "eyebrow": "The Team Behind You.",
+    "titleLead": "Meet Our Exceptional",
+    "titleAccent": "Attorneys"
+  },
+  "testimonials": {
+    "eyebrow": "Client Testimonials",
+    "titleLead": "Real Clients.",
+    "titleAccent": "Real Reviews."
+  },
+  "faq": {
+    "eyebrow": "How can we help you",
+    "titleLead": "Frequently Asked",
+    "titleAccent": "Questions"
+  },
+  "awards": {
+    "eyebrow": "Awards & Honors",
+    "titleLead": "Achievements and",
+    "titleAccent": "Accolades",
+    "items": [
+      {
+        "issuer": "U.S. Department of Defense",
+        "name": "The Freedom Award",
+        "text": "The Law Firm was awarded the Freedom Award by the Department of Defense for the United States of America for its treatment and hiring of United States Veterans returning from the Iraq War."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Free initial consult",
+    "titleLead": "Tell us how",
+    "titleAccent": "we can help you",
+    "note": "All Fields Required *"
+  }
+}
